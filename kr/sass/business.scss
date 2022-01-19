@@ -1,0 +1,135 @@
+@charset "utf-8";
+@import "settings";
+
+.con_business {
+    .sub_top_tit {
+        .box_visual { background: url("../business/imgs/img_top.jpg") no-repeat center;}
+    }
+    .box_business {
+        display: block;
+        max-width: 1310px;
+        @extend %bw;
+        @include cV(padding, 90px 0, 10% 0);
+        @include cV(margin-top, 0, 10%);
+        max-width: 1310px;
+        .box_msg {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .st {
+                @include cV(width, 440px, 100%);
+                @include cV(margin-bottom, 0, 5%);
+                strong, small {display: block;}
+                strong {
+                    @include fsz-cha(55,55,40);
+                    @include cV(margin-bottom, 20px, 3%);
+                    line-height: 1.2em;
+                    span {
+                        display: inline-block;
+                        color: #E1E1E1;
+                    }
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 70px;
+                        height: 1px;
+                        background-color: #000;
+                        @include cV(margin-top, 20px, 3%);
+                    }
+                }
+                small {
+                    @include fsz-cha(28,28,22);
+                    font-weight: 500;
+                }
+            }
+        }
+        .box_cate {
+            .cate {
+                display: flex;
+                flex-wrap: wrap;
+                @include cV(padding-top, 180px, 10%, 20%);
+                .box_img {
+                    @include cV(width, 705px, 300px, 100vw);
+                    @include cV(height, 450px, 500px, 55vw);
+                    &.oem {
+                        background: url("../business/imgs/img_biz_01.jpg") no-repeat center;
+                        background-size: cover;                        
+                    }
+                    &.food {
+                        background: url("../business/imgs/img_biz_02.jpg") no-repeat center;
+                        background-size: cover;                        
+                    }
+                    &.web {
+                        background: url("../business/imgs/img_biz_03.jpg") no-repeat center;
+                        background-size: cover;                        
+                    }
+                    &.con {
+                        background: url("../business/imgs/img_biz_04.jpg") no-repeat center;
+                        background-size: cover;                        
+                    }
+                }
+                .box_txt {
+                    @include cV(width, calc(100% - 705px), calc(100% - 300px), 100%);
+                    box-sizing: border-box;
+                    @include cV(padding-left, 50px, 5%, 0);
+                    .cate_tit {
+                        display: block;
+                        @include cV(margin-top, 0, 5%);
+                        @include fsz-cha(28,28,24);
+                        @include cV(padding-bottom, 20px, 3%);
+                        @include cV(margin-bottom, 25px, 5%);
+                        border-bottom: 1px solid #000;
+                    }
+                    dl {
+                        dt, dd {display: block;}
+                        dt {font-weight: 600;}
+                        dd {@include fsz-cha(14,14,13);}
+                    }
+                    .cate_st {
+                        @include cV(margin-bottom, 50px, 7%);
+                        dt {
+                            @include fsz-cha(18,18,16);
+                            @include cV(margin-bottom, 10px, 3%);
+                        }
+                        dd { color: #acacac;}
+                    }
+                    .cate_txt {
+                        dt, dd {@include fsz-cha(14,14,13);}
+                        dt {
+                            font-weight: 600;
+                            @include cV(margin-bottom, 10px, 3%);
+                        }
+                        dd {
+                            color: #666;
+                            line-height: 1.8em;
+                        }
+                        .exlist {
+                            @include cV(margin-top, 20px, 3%);
+                            li {
+                                @include fsz-cha(14,14,13);
+                                color: #666666;
+                                display: inline-block;
+                                &:before {
+                                    content: "|";
+                                    display: inline-block;
+                                    color: #ccc;
+                                    padding: 0 0.5em;
+                                }
+                                &:first-child {
+                                    &:before {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .btn_more {
+                        width: 100%;
+                        margin: 20px 0 0;
+                    }
+                }
+            }
+        }
+    }
+    
+}

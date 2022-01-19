@@ -1,0 +1,139 @@
+@charset "utf-8";
+@import "settings";
+
+#con_page {
+    .con_cont {
+        
+        
+        .box_cont {
+            @extend %bw;
+            .st {
+                border-bottom: 3px solid $pointColor;
+                @include cV(padding-bottom, 20px, 3%);
+            }
+            form {
+                @include cV(padding, 50px 0, 5% 0);
+                .form_cate {
+                    display: flex;
+                    align-items: center;
+                    legend {
+                        display: block;
+                        width: 100%;
+                        font-weight: 600;
+                        @include cV(margin-bottom, 20px, 3%);
+                    }
+                    legend + p {margin-left: 0;}
+                    p {
+                        @include cV(margin-left, 50px, 0);
+                        font-weight: 300;
+                        input {margin-right: 0.3em;}
+                    }
+                    @include mq(sp) {
+                        flex-wrap: wrap;
+                        p {
+                            width: 100%;
+                            margin-bottom: 3%;
+                            padding-bottom: 3%;
+                            display: flex;
+                            align-items: center;
+                            border-bottom: 1px dotted #d9d9d9;
+                            input {width: 5%;}
+                            label {width: 95%;}
+                        }
+                    }
+                }
+                .form_info {
+                    @include cV(margin-top, 60px, 10%);
+                    p {
+                        @include cV(margin-bottom, 30px, 5%);
+                        display: flex;
+                        flex-wrap: wrap;
+                        label, input, textarea {
+                            width: 100%;
+                            box-sizing: border-box;
+                            
+                        }
+                        label {margin-bottom: 0.2em;}
+                        input, textarea {
+                            -webkit-appearance: none;
+                            -webkit-border-radius: 0;
+                            padding: 0.2em 1em;
+                            border: none;
+                            border-bottom: 1px solid #d9d9d9;
+                            &:focus {
+                                border-bottom: 1px solid $pointColor;
+                            }
+                        }
+                        textarea {resize: vertical;}
+                    }
+                    
+                }
+                .box_law {
+                    @include cV(margin-top, 60px, 6%);
+                    
+                    .tit {
+                        text-align: left;
+                        width: 100%;
+                        @include cV(margin-bottom, 30px, 3%);
+                        dt {font-weight: 600;}
+                    }
+                    .box_txt {
+                        box-sizing: border-box;
+                        border: 1px solid #d9d9d9;
+                        @include cV(padding, 2%, 3%);
+                        @include fsz-cha(14,14,13);
+                        overflow-y: scroll;
+                        ul {
+                            box-sizing: border-box;
+                            @include cV(padding-left, 15px, 7%);
+                            li {
+                                @include cV(margin-top, 15px, 2%);
+                                font-weight: 300;
+                                list-style-type: decimal;
+                                dl {
+                                    display: flex;
+                                    dt {
+                                        &:after {
+                                            content: ":";
+                                            display: inline-block;
+                                            padding: 0 0.5em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .box_agree {
+                        @include cV(margin-top, 20px, 3%);
+                        display: block;
+                        text-align: center;
+                    }
+                }
+                .btn_send {
+                    @include cV(margin, 60px auto 80px, 8% auto 15%);
+                    @include cV(width, 345px, 100%);
+                    input {
+                        box-sizing: border-box;
+                        width: 100%;
+                        background-color: $pointColor;
+                        color: #fff;
+                        padding: 1em 1.5em;
+                        border: none;
+                        -webkit-appearance: none;
+                        -webkit-border-radius: 0;
+                        
+                    }
+                    @include mq(pc) {
+                        input {
+                            &:hover {
+                                background-color: lighten($pointColor, 7%);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
